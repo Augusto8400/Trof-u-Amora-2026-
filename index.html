@@ -69,11 +69,11 @@
     </header>
 
     <!-- Hero Banner com Foto de Capa dos Participantes -->
-    <section class="relative bg-stone-900 text-white py-16 sm:py-24 px-4 overflow-hidden">
-        <!-- Imagem de Capa dos Participantes -->
-        <img src="assets\fotos\competidores.JPG" 
+    <section class="relative bg-stone-900 text-white py-20 sm:py-32 px-4 overflow-hidden">
+        <!-- Imagem de Capa dos Participantes (Corrigido para usar barras normais / e object-fit cover centralizado) -->
+        <img src="assets/fotos/competidores.JPG" 
              alt="Foto dos Participantes do Troféu Amora 2026" 
-             class="absolute inset-0 w-full h-full object-cover opacity-30 brightness-90"
+             class="absolute inset-0 w-full h-full object-cover object-center opacity-30 brightness-90"
              onerror="this.src='https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80'">
         
         <!-- Overlay escuro gradiente para garantir a leitura do título -->
@@ -81,8 +81,7 @@
         
         <!-- Conteúdo da Capa -->
         <div class="max-w-4xl mx-auto text-center relative z-10">
-
-            <h1 class="font-serif-title text-3xl sm:text-5xl font-extrabold mb-3 leading-tight text-stone-50 drop-shadow-md">
+            <h1 class="font-serif-title text-3xl sm:text-5xl font-extrabold leading-tight text-stone-50 drop-shadow-md">
                 Receitas do Troféu Amora 2026
             </h1>
         </div>
@@ -166,11 +165,10 @@
         </div>
     </div>
 
-    <!-- RODAPÉ COMPLETO COM PROPÓSITO E FOTO DA EQUIPE -->
+    <!-- RODAPÉ COMPLETO -->
     <footer class="bg-stone-900 text-stone-300 py-12 border-t border-stone-800 mt-16">
         <div class="max-w-4xl mx-auto px-4 text-center">
             
-            <!-- Título e Propósito do Projeto -->
             <div class="mb-8">
                 <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-stone-800 text-chef-terracotta text-xl mb-3 shadow-inner">
                     <i class="fa-solid fa-heart text-chef-terracotta"></i>
@@ -182,15 +180,12 @@
                 </p>
             </div>
 
-            <!-- Foto da Equipe Organizadora -->
             <div class="mb-8 max-w-xl mx-auto">
                 <div class="relative group rounded-2xl overflow-hidden border-2 border-stone-700 shadow-2xl bg-stone-800 p-2">
-                    <!-- Foto da Equipe (substitua pelo caminho real da imagem na pasta assets/fotos/equipe.jpg) -->
-                    <img src="assets\fotos\Soma2026.JPG" alt="Equipe Organizadora SOMA / ASSAE" class="w-full h-64 sm:h-80 object-cover rounded-xl transition duration-500 group-hover:scale-105" onerror="this.src='https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80'">
+                    <img src="assets/fotos/Soma2026.JPG" alt="Equipe Organizadora SOMA / ASSAE" class="w-full h-64 sm:h-80 object-cover rounded-xl transition duration-500 group-hover:scale-105" onerror="this.src='https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80'">
                 </div>
             </div>
 
-            <!-- Crédito Institucional -->
             <div class="pt-8 border-t border-stone-800 text-xs text-stone-500">
                 <p class="font-medium text-stone-400 mb-1">Ação realizada pelo <span class="text-stone-200">SOMA</span> — vertente da <span class="text-stone-200">ASSAE</span></p>
                 <p class="text-[11px] text-stone-600">UTFPR — Universidade Tecnológica Federal do Paraná • 2026</p>
@@ -285,7 +280,7 @@
             },
             {
                 id: 10,
-                title: "Torta de Amora com Limão-Siciliano ",
+                title: "Torta de Amora com Limão-Siciliano",
                 author: "Lavinia Dias Miorin",
                 rank: 0,
                 fileType: "jpg",
@@ -300,14 +295,12 @@
                 fileType: "pdf",
                 fileUrl: "assets/receitas/Torta_de_Amora-ALESSANDRA FRASSON DE CAMARGO.docx.pdf",
                 coverImage: "assets/fotos/Torta2.JPG"
-            },
-
+            }
         ];
 
         document.addEventListener('DOMContentLoaded', () => {
             renderPodium();
             renderRecipes(recipesData);
-
             document.getElementById('searchInput').addEventListener('input', filterRecipes);
         });
 
@@ -425,12 +418,10 @@
 
         function filterRecipes() {
             const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
-
             const filtered = recipesData.filter(recipe => {
                 return recipe.title.toLowerCase().includes(searchTerm) || 
                        recipe.author.toLowerCase().includes(searchTerm);
             });
-
             renderRecipes(filtered);
         }
 
@@ -484,11 +475,6 @@
                 document.getElementById('modalViewerBody').innerHTML = '';
             }, 250);
             document.body.style.overflow = 'auto';
-        }
-
-        function toggleGuideModal() {
-            const guideModal = document.getElementById('guideModal');
-            guideModal.classList.toggle('hidden');
         }
     </script>
 </body>
