@@ -68,11 +68,21 @@
         </div>
     </header>
 
-    <!-- Hero Banner -->
-    <section class="relative bg-stone-900 text-white py-10 sm:py-14 px-4 overflow-hidden">
-        <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#C85A32_1px,transparent_1px)] [background-size:20px_20px]"></div>
+    <!-- Hero Banner com Foto de Capa dos Participantes -->
+    <section class="relative bg-stone-900 text-white py-16 sm:py-24 px-4 overflow-hidden">
+        <!-- Imagem de Capa dos Participantes -->
+        <img src="assets\fotos\competidores.JPG" 
+             alt="Foto dos Participantes do Troféu Amora 2026" 
+             class="absolute inset-0 w-full h-full object-cover opacity-30 brightness-90"
+             onerror="this.src='https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80'">
+        
+        <!-- Overlay escuro gradiente para garantir a leitura do título -->
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/60 to-stone-900/40"></div>
+        
+        <!-- Conteúdo da Capa -->
         <div class="max-w-4xl mx-auto text-center relative z-10">
-            <h1 class="font-serif-title text-3xl sm:text-5xl font-extrabold mb-3 leading-tight text-stone-50">
+
+            <h1 class="font-serif-title text-3xl sm:text-5xl font-extrabold mb-3 leading-tight text-stone-50 drop-shadow-md">
                 Receitas do Troféu Amora 2026
             </h1>
         </div>
@@ -156,7 +166,6 @@
         </div>
     </div>
 
-
     <!-- RODAPÉ COMPLETO COM PROPÓSITO E FOTO DA EQUIPE -->
     <footer class="bg-stone-900 text-stone-300 py-12 border-t border-stone-800 mt-16">
         <div class="max-w-4xl mx-auto px-4 text-center">
@@ -178,17 +187,11 @@
                 <div class="relative group rounded-2xl overflow-hidden border-2 border-stone-700 shadow-2xl bg-stone-800 p-2">
                     <!-- Foto da Equipe (substitua pelo caminho real da imagem na pasta assets/fotos/equipe.jpg) -->
                     <img src="assets\fotos\Soma2026.JPG" alt="Equipe Organizadora SOMA / ASSAE" class="w-full h-64 sm:h-80 object-cover rounded-xl transition duration-500 group-hover:scale-105" onerror="this.src='https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80'">
-                    
-                    <div class="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-transparent to-transparent flex items-end justify-center p-4">
-                        <span class="text-xs sm:text-sm font-medium text-stone-200 bg-stone-900/80 backdrop-blur px-3 py-1.5 rounded-lg border border-stone-700">
-                            <i class="fa-solid fa-users text-chef-terracotta mr-1.5"></i> Equipe Organizadora no Evento
-                        </span>
-                    </div>
                 </div>
             </div>
 
             <!-- Crédito Institucional -->
-            <div class="pt-6 border-t border-stone-800 text-xs text-stone-500">
+            <div class="pt-8 border-t border-stone-800 text-xs text-stone-500">
                 <p class="font-medium text-stone-400 mb-1">Ação realizada pelo <span class="text-stone-200">SOMA</span> — vertente da <span class="text-stone-200">ASSAE</span></p>
                 <p class="text-[11px] text-stone-600">UTFPR — Universidade Tecnológica Federal do Paraná • 2026</p>
             </div>
@@ -238,7 +241,7 @@
             {
                 id: 5,
                 title: "Carolinas de Amora",
-                author: "Leonardo Moreira Kunzler & Lucas Arthur Vieira dos Reis",
+                author: "Leonardo",
                 rank: 0,
                 fileType: "pdf",
                 fileUrl: "assets/receitas/Carolinas de amora - LeuuK (Leonardo).pdf",
